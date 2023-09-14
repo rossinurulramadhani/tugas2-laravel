@@ -31,38 +31,35 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form>
+                            <form action="{{route('anggota.store')}}" method="POST">
+                                @csrf
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="id">ID Anggota</label>
-                                        <input type="text" class="form-control" id="id" placeholder="Masukkan ID">
-                                    </div>
-                                    <div class="form-group">
                                         <label for="kode_anggota">Kode Anggota</label>
-                                        <input type="text" class="form-control" id="kode_anggota"
+                                        <input type="text" class="form-control" name="kode_anggota" id="kode_anggota" 
                                             placeholder="Masukan kode">
                                     </div>
                                     <div class="form-group">
                                         <label for="nama">Nama</label>
-                                        <input type="text" class="form-control" id="nama"
+                                        <input type="text" class="form-control" name="nama_anggota" id="nama"
                                             placeholder="Masukan nama">
                                     </div>
                                     <div class="form-group">
-                                        <label for="jk">Jenis Kelamin</label>
+                                        <label for="jk_anggota">Jenis Kelamin</label>
                                         <div class="custom-control custom-radio">
-                                            <input class="custom-control-input" type="radio" id="p"
+                                            <input class="custom-control-input" type="radio" name="jk_anggota"  id="p" value="L"
                                                 name="jk">
                                             <label for="p" class="custom-control-label">Laki-laki</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input class="custom-control-input" type="radio" id="l"
+                                            <input class="custom-control-input" type="radio" name="jk_anggota" id="l" value="P"
                                                 name="jk">
                                             <label for="l" class="custom-control-label">Perempuan</label>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Jurusan</label>
-                                        <select class="custom-select">
+                                        <select class="custom-select" name="jurusan_anggota">
                                             <option selected disabled>Pilih Jurusan</option>
                                             <option>RPL</option>
                                             <option>DPIB</option>
@@ -79,13 +76,13 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
                                             </div>
-                                            <input type="number" class="form-control"
+                                            <input type="number" class="form-control" name="no_telpon"
                                                 data-inputmask='"mask": "(999) 999-9999"' data-mask placeholder="Masukan angka">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                             <label>Alamat</label>
-                                            <textarea class="form-control" rows="3" placeholder="Masukan alamat"></textarea>
+                                            <textarea class="form-control" name="alamat_anggota" rows="3" placeholder="Masukan alamat"></textarea>
                                         </div>
                                 </div>
                                 <div class="card-footer">
