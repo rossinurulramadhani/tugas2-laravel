@@ -42,3 +42,4 @@ Route::get('/', function () {
 // Route::resource('/cast', CastController::class);
 
 Route::resource('/anggota', AnggotaController::class);
+Route::resource('/petugas', PetugasController::class);
