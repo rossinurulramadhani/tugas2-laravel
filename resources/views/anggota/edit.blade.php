@@ -31,19 +31,19 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form action="{{route('anggota.update', $anggota[0]->id)}}" method="POST">
+                            <form action="{{route('anggota.update', $members[0]->id)}}" method="POST">
                                 @csrf
                                 @method('PUT')
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="kode_anggota">Kode Anggota</label>
                                         <input type="text" class="form-control @error('id') is-invalide @enderror" name="kode_anggota" id="kode_anggota" 
-                                            placeholder="Masukan kode" value="{{ $anggota[0]->kode_anggota}}">
+                                            placeholder="Masukan kode" value="{{ $members[0]->kode_anggota}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="nama">Nama</label>
                                         <input type="text" class="form-control  @error('id') is-invalide @enderror" name="nama_anggota" id="nama"
-                                            placeholder="Masukan nama" value="{{ $anggota[0]->nama_anggota}}">
+                                            placeholder="Masukan nama" value="{{ $members[0]->nama_anggota}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="jk_anggota">Jenis Kelamin</label>
@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="form-group">
                                             <label>Alamat</label>
-                                            <textarea class="form-control" name="alamat_petugas" rows="3" placeholder="Masukan alamat">{{ $members[0]->alamat_petugas}}</textarea>
+                                            <textarea class="form-control" name="alamat_anggota" rows="3" placeholder="Masukan alamat">{{ $members[0]->alamat_anggota}}</textarea>
                                         </div>
                                 </div>
                                 <div class="card-footer">
