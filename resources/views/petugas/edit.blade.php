@@ -52,7 +52,7 @@
                                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
                                             </div>
                                             <input type="number" class="form-control  @error('id') is-invalide @enderror" name="no_telpon"
-                                                data-inputmask='"mask": "(999) 999-9999"' data-mask placeholder="Masukan angka">
+                                                data-inputmask='"mask": "(999) 999-9999"' data-mask placeholder="Masukan angka" value="{{ $operators[0]->no_telpon}}">
                                         </div>
                                     </div>
                                     <div class="form-group">
